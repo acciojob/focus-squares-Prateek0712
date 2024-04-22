@@ -3,6 +3,7 @@ let sqrArr= document.querySelectorAll('.square');
 for(let s of sqrArr)
 	{
 		s.addEventListener('mouseover', changeColor);
+		s.addEventListener('mouseout', resetColor);
 	}
 function  changeColor(event_details) {
 	for(let  s of sqrArr)
@@ -15,5 +16,11 @@ function  changeColor(event_details) {
 			{
 				s.style.backgroundColor = '#E6E6FA';
 			}
+		}
+}
+function resetColor(event_details){
+	for(let  s of sqrArr)
+		{
+			s.style.backgroundColor='#E6E6FA';
 		}
 }
